@@ -42,3 +42,9 @@ Hộp kết quả dùng màu nhấn xanh lá (an toàn)
 
 Tự động xuống dòng khi mã quá dài
 
+Giao diện web trước khi giải mã
+![image](https://github.com/user-attachments/assets/583c30b6-bfc9-4ead-a355-84bfded5d0dd)
+
+Giao diện web sau khi giải mã
+![image](https://github.com/user-attachments/assets/cac6f1f4-701d-49a7-804c-0903d5ff3e2a)
+
