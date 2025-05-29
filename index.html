@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SHA Hash Demo</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f2f5;
+        padding: 40px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        resize: vertical;
+    }
+
+    button {
+        background-color:rgb(152, 176, 203);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color:rgb(181, 188, 141);
+    }
+
+    .hash-box {
+        background-color: #fff;
+        border-left: 5px solidrgb(83, 147, 203);
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        word-break: break-all;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+</style>
+
+</head>
+<body>
+    <h2>Băm dữ liệu bằng SHA-256 và SHA-512</h2>
+    <form method="POST">
+        <label>Dữ liệu gốc:</label>
+        <textarea name="original" rows="2" required></textarea>
+        <label>Dữ liệu đã sửa:</label>
+        <textarea name="modified" rows="2" required></textarea>
+        <button type="submit">Băm</button>
+    </form>
+
+    {% if result %}
+        <h3>Kết quả:</h3>
+        <div class="hash-box">
+            <b>SHA-256 (Gốc):</b><br>{{ result.sha256_original }}
+        </div>
+        <div class="hash-box">
+            <b>SHA-512 (Gốc):</b><br>{{ result.sha512_original }}
+        </div>
+        <div class="hash-box">
+            <b>SHA-256 (Đã sửa):</b><br>{{ result.sha256_modified }}
+        </div>
+        <div class="hash-box">
+            <b>SHA-512 (Đã sửa):</b><br>{{ result.sha512_modified }}
+        </div>
+    {% endif %}
+</body>
+</html>
